@@ -1,0 +1,3 @@
+- var id = id || name, value = form && form[name] || value || '', placeholder = placeholder || ''
+input(type='text', id=id, name=name, value=value, placeholder=placeholder)
+!= partial('form/errors', {name: name})

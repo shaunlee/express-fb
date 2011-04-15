@@ -1,0 +1,18 @@
+body {
+  width:960px;
+  margin:0 auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a { color: #00b7ff; }
+
+.form-item { margin:.5em 0; }
+.form-item label { cursor:pointer; }
+.form-item.text input, .form-item.text textarea, .form-item.list select { border:1px solid #ccc; }
+.form-item input.error, .form-item textarea.error  { border:1px solid #f00; }
+.form-item input, .form-item textarea { display:block; }
+.form-item .choices input, .form-item.check input { display:inline; }
+.form-item .tips { color:#aaa; }
+
+.errors { color:#f00; }
+.errors ul { list-style:none; margin:0; padding:0; }
+

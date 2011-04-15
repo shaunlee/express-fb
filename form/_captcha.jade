@@ -1,0 +1,14 @@
+- var id = id || name, hint = hint || 'Click to refresh'
+div
+  img(src=captcha && captcha.toDataURL(), id=id)
+  a(href='javascript:;', id=id + '-refresh') #{hint}
+div!= partial('text', {name: name, value: ''})
+script
+  $("\##{id}-refresh").click(function() {
+    $.get("#{url}", function(data) {
+      var img = $("<img></img>");
+      img.attr("id", "#{id}");
+      img.attr("src", data);
+      $("\##{id}").replaceWith(img);
+    });
+  });

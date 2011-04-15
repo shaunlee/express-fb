@@ -1,0 +1,5 @@
+- var id = id || name, value = form && form[name] || value || '', checked = checked ? 'checked' : ''
+- var hideErrors = false || hideErrors
+input(type='checkbox', id=id, name=name, value=value, checked=checked)
+- if (!hideErrors)
+  != partial('form/errors', {name: name})

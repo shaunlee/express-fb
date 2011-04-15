@@ -1,0 +1,3 @@
+- var id = id || name, value = form && form[name] || value || '', placeholder = placeholder || ''
+textarea(id=id, name=name, placeholder=placeholder) #{value}
+!= partial('form/errors', {name: name})

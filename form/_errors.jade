@@ -1,0 +1,6 @@
+//- Show errors
+- var errors = form && form.getErrors(name) || []
+- if (errors.length > 0)
+  .errors: ul
+    - each error in errors
+      li #{error}

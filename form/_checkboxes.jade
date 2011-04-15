@@ -1,0 +1,13 @@
+- var value = form && form[name] || value || [], options = options || []
+.choices
+  - if (options instanceof Array)
+    - each option in options
+      label
+        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : '')
+        = option
+  - else
+    - for (var option in options)
+      label
+        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : '')
+        = options[option]
+!= partial('form/errors', {name: name})
