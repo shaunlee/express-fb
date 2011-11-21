@@ -1,5 +1,5 @@
-- var id = id || name, value = form && form[name] || value || [], options = options || []
-select(id=id, name=name, multiple='multiple')
+- var id = id || name, value = form && form[name] || value || [], options = options || [], classes = classes || ''
+select(id=id, name=name, multiple='multiple', class=classes)
   - if (options instanceof Array)
     - each option in options
       option(value=option, selected=value.indexOf(option) > -1 ? 'selected' : '')= option
