@@ -3,11 +3,11 @@
   - if (options instanceof Array)
     - each option in options
       label
-        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : '')
+        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : null)
         = option
   - else
     - for (var option in options)
       label
-        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : '')
+        input(type='checkbox', name=name, value=option, checked=value.indexOf(option) > -1 ? 'checked' : null)
         = options[option]
 != partial('form/errors', {name: name})

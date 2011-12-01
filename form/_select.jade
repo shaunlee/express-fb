@@ -1,9 +1,9 @@
-- var id = id || name, value = form && form[name] || value || '', options = options || [], classes = classes || ''
+- var id = id || name, value = form && form[name] || value || null, options = options || [], classes = classes || null
 select(id=id, name=name, class=classes)
   - if (options instanceof Array)
     - each option in options
-      option(value=option, selected=value === option ? 'selected' : '')= option
+      option(value=option, selected=value === option ? 'selected' : null)= option
   - else
     - for (var option in options)
-      option(value=option, selected=value === option ? 'selected' : '')= options[option]
+      option(value=option, selected=value === option ? 'selected' : null)= options[option]
 != partial('form/errors', {name: name})

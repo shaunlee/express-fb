@@ -1,13 +1,13 @@
-- var value = form && form[name] || value || '', options = options || []
+- var value = form && form[name] || value || null, options = options || []
 .choices
   - if (options instanceof Array)
     - each option in options
       label
-        input(type='radio', name=name, value=option, checked=value === option ? 'checked' : '')
+        input(type='radio', name=name, value=option, checked=value === option ? 'checked' : null)
         = option
   - else
     - for (var option in options)
       label
-        input(type='radio', name=name, value=option, checked=value === option ? 'checked' : '')
+        input(type='radio', name=name, value=option, checked=value === option ? 'checked' : null)
         = options[option]
 != partial('form/errors', {name: name})
